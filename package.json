@@ -1,6 +1,10 @@
 {
   "name": "dealership-inventory-system",
   "private": true,
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "pnpm --parallel --filter backend --filter frontend dev",
     "test": "pnpm --filter backend test",

@@ -5,7 +5,7 @@ import { createDatabase } from './db.js';
 
 export function createApp(db = createDatabase()) {
   const app = express();
-  app.use(cors());
+  app.use(cors(process.env.FRONTEND_URL ? { origin: process.env.FRONTEND_URL } : undefined));
   app.use(express.json());
 
   const publicUser = ({ id, name, email, role }) => ({ id, name, email, role });
